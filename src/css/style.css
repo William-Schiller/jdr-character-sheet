@@ -1,0 +1,66 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url(../assets/img/bg.jpg);
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    border: 5px solid green;
+}
+
+/* MAIN */
+main {
+    flex: 1;
+    margin: 15px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+/* FOOTER */
+footer {
+    border: 5px solid green;    
+}
+footer > .tools-bar {
+    height: 200px;
+    display: flex;
+}
+.tools-bar > .health, .stamina {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 20%, #000 40%, rgba(0,0,0,.5) 80%);
+}
+.tools-bar > .tools {
+    flex-grow: 4;
+}
+.tools-bar > .health > #health-bar {
+    background-image: linear-gradient(0deg, rgba(255,0,0,1) 0%, rgba(255,255,255,1) 100%);
+}
+.tools-bar > .stamina > #stamina-bar {
+    background-color: blue;
+}
+.tools-bar #health-bar, #stamina-bar {
+    width: 100%;
+    height: 100%;
+    max-width: 200px;
+    aspect-ratio: 3 / 8;
+    border-radius: 100% / 125% 125% 80% 80%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+
+/* GENERIC */
+.to-action {
+    cursor: pointer;
+}
